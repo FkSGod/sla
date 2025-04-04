@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Site com Senha</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f0f0f0;
+        }
+        .container {
+            width: 800px;
+            margin: 40px auto;
+            background-color: #fff;
+            padding: 20px;
+            border: 1px solid #ddd;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+        }
+        .titulo {
+            font-size: 24px;
+            margin-bottom: 20px;
+        }
+        .imagem {
+            width: 100%;
+            height: 300px;
+            margin-bottom: 20px;
+            border-radius: 10px;
+        }
+        .botao {
+            background-color: #4CAF50;
+            color: #fff;
+            padding: 10px 20px;
+            border: none;
+            border-radius: 10px;
+            cursor: pointer;
+        }
+        .botao:hover {
+            background-color: #3e8e41;
+        }
+        .senha {
+            width: 100%;
+            height: 30px;
+            margin-bottom: 20px;
+            padding: 10px;
+            border: 1px solid #ccc;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1 class="titulo">Bem-vindo ao nosso site!</h1>
+        <input type="password" id="senha" class="senha" placeholder="Digite a senha">
+        <button class="botao" onclick="verificarSenha()">Entrar</button>
+        <div id="conteudo" style="display: none;">
+            <img class="imagem" src="img/cálculo matemático - Pesquisa Google_files/24px.svg" alt="Imagem de exemplo">
+            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed sit amet nulla auctor, vestibulum magna sed, convallis ex.</p>
+        </div>
+    </div>
+    <script>
+        function verificarSenha() {
+            var senha = document.getElementById("senha").value;
+            if (senha === "Netinho123") {
+                document.getElementById("conteudo").style.display = "block";
+            } else {
+                alert("Senha incorreta!");
+            }
+        }
+    </script>
+</body>
+</html>
