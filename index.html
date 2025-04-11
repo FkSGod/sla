@@ -1,69 +1,48 @@
 <!DOCTYPE html>
-<html>
+<html lang="pt-br">
+
 <head>
-    <title>Site com Senha</title>
-    <style>
-        body {
-            font-family: Arial, sans-serif;
-            background-color: #f0f0f0;
-        }
-        .container {
-            width: 800px;
-            margin: 40px auto;
-            background-color: #fff;
-            padding: 20px;
-            border: 1px solid #ddd;
-            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
-        }
-        .titulo {
-            font-size: 24px;
-            margin-bottom: 20px;
-        }
-        .imagem {
-            width: 100%;
-            height: 300px;
-            margin-bottom: 20px;
-            border-radius: 10px;
-        }
-        .botao {
-            background-color: #4CAF50;
-            color: #fff;
-            padding: 10px 20px;
-            border: none;
-            border-radius: 10px;
-            cursor: pointer;
-        }
-        .botao:hover {
-            background-color: #3e8e41;
-        }
-        .senha {
-            width: 100%;
-            height: 30px;
-            margin-bottom: 20px;
-            padding: 10px;
-            border: 1px solid #ccc;
-        }
-    </style>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Meus objetivos do ano</title>
+    <link rel="stylesheet" href="style.css">
 </head>
+
 <body>
-    <div class="container">
-        <h1 class="titulo">Bem-vindo ao nosso site!</h1>
-        <input type="password" id="senha" class="senha" placeholder="Digite a senha">
-        <button class="botao" onclick="verificarSenha()">Entrar</button>
-        <div id="conteudo" style="display: none;">
-            <img class="imagem" src="https://conteudo.imguol.com.br/c/entretenimento/8a/2021/11/19/relampago-marquinhos-mcqueen-fabio-dantas-logan-uber-1637360917352_v2_4x3.jpg" alt="Imagem de exemplo">
-            <p>Este é relampago marquinho, o campeão do mundo todo.</p>
+    <section class="conteudo-principal">
+        <h2 class="titulo-principal">Meus Objetivos do ano<span>_</span></h2>
+        <div class="conteudo">
+            <div class="botoes">
+                <button class="botao ativo">Cursos na Alura</button>
+                <button class="botao">Criar projetos em Javascript</button>
+                <button class="botao">Criar um portfolio</button>
+                <button class="botao">Atualizar meu currículo</button>
+            </div>
+            <div class="abas-textos">
+                <div class="aba-conteudo ativo">
+                    <h3 class="aba-conteudo-titulo-principal">Estudar 4 cursos na Alura</h3>
+                    <h4 class="aba-conteudo-titulo-secundario">Tempo para completar o objetivo</h4>
+                    <div class="contador"></div>
+                </div>
+                <div class="aba-conteudo">
+                    <h3 class="aba-conteudo-titulo-principal">Criar 5 projetos em Javascript</h3>
+                    <h4 class="aba-conteudo-titulo-secundario">Tempo para completar o objetivo</h4>
+                    <div class="contador"></div>
+                </div>
+                <div class="aba-conteudo">
+                    <h3 class="aba-conteudo-titulo-principal">Criar um portfolio com os meus 3 melhores projetos</h3>
+                    <h4 class="aba-conteudo-titulo-secundario">Tempo para completar o objetivo</h4>
+                    <div class="contador"></div>
+                </div>
+                <div class="aba-conteudo">
+                    <h3 class="aba-conteudo-titulo-principal">Atualizar meu curriculo com os certificados da Alura</h3>
+                    <h4 class="aba-conteudo-titulo-secundario">Tempo para completar o objetivo</h4>
+                    <div class="contador"></div>
+                </div>
+            </div>
         </div>
-    </div>
-    <script>
-        function verificarSenha() {
-            var senha = document.getElementById("senha").value;
-            if (senha === "Netinho123") {
-                document.getElementById("conteudo").style.display = "block";
-            } else {
-                alert("Senha incorreta!");
-            }
-        }
-    </script>
+    </section>
+    <script src="main.js"></script>
 </body>
+
 </html>
